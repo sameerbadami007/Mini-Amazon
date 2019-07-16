@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+		<title>{{ title }}</title>
+	{% else %}
+		<title>Amazon</title>
+	{% endif %}
+</head>
+
+<p>This is the home page!</p>
+
+<p>Login!</p>
+<form action="/login" method="POST">
+	<input type="text" name="username" placeholder="Username"><br>
+	<input type="password" name="password" placeholder="Password"><br>
+	<input type="submit" name="Login"><br>
+</form>
+
+<p>Don't have an account? Sign Up!</p>
+<form action="/signup" method="POST">
+	<input type="text" name="username" placeholder="Username">
+	<input type="password" name="password1" placeholder="Password">
+	<input type="password" name="password2" placeholder="Re-Enter Password">
+	<p>Customer Type</p>
+	<p>Buyer:</p><input type='radio' name='type' value='buyer'>
+	<p>Seller:</p><input type='radio' name='type' value='seller'><br>
+	<input type="submit" name="submit"><br>
+</form>
+</html>
