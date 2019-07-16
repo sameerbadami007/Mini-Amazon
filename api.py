@@ -66,7 +66,7 @@ def products():
 		if product_exists(product_info['name']):
 			return "product exists"
 		add_product(product_info)
-		return redirect(url_for('products'))
+		return redirect(url_for('home'))
 	return render_template('products.html',products=products_list())
 
 @app.route('/remove',methods=['GET','POST'])

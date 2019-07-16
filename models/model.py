@@ -25,7 +25,7 @@ def add_product(product_info):
 	db['products'].insert_one(product_info)
 
 def products_list():
-	if session['c_type']=='buyer':
+	if session['c_type']=='seller':
 		result=db['products'].find({})
 		return result
 	query={"Seller":session['username']}
